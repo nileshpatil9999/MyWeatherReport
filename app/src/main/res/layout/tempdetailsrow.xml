@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="list"
+            type="com.nilesh.myweatherreport.POJOClasss.WeatherForeCast.List"></variable>
+
+
+
+        <variable
+            name="temp"
+            type="com.nilesh.myweatherreport.POJOClasss.WeatherForeCast.List.Temp"></variable>
+
+
+        <variable
+            name="day"
+            type="com.nilesh.myweatherreport.POJOClasss.WeatherForeCast.Dates"></variable>
+
+
+    </data>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cityback_converted2"
+        android:layout_margin="10dp"
+              >
+
+
+
+
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temperature"
+        android:id="@+id/temptv"
+        android:layout_marginTop="63dp"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentTop="true"
+        app:font="@{`OpenSans-Semibold.ttf`}"
+
+
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{day.Day}"
+        android:id="@+id/date"
+        android:textSize="18dp"
+        android:padding="10dp"
+        android:textStyle="bold"
+
+
+        android:layout_centerHorizontal="true" />
+
+
+    <View
+        android:id="@+id/firstdivider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/toolbarcolor"
+        android:layout_below="@+id/date">
+
+    </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Min Temp"
+        android:id="@+id/mintemptv"
+        android:layout_below="@+id/temptv"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:font="@{`OpenSans-Semibold.ttf`}"
+
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Max Temp"
+        android:id="@+id/maxtemptv"
+        android:layout_below="@+id/mintemptv"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:font="@{`OpenSans-Semibold.ttf`}"
+
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity"
+        android:id="@+id/humiditytv"
+        android:layout_below="@+id/maxtemptv"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        app:font="@{`OpenSans-Semibold.ttf`}"
+        android:layout_marginLeft="20dp"
+         />
+
+
+
+    <LinearLayout
+        android:id="@+id/templay"
+        android:layout_toRightOf="@+id/temptv"
+        android:layout_marginTop="63dp"
+        android:layout_marginRight="20dp"
+        android:gravity="right|center_vertical"
+
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+
+      >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{temp.day }"
+            android:id="@+id/temperature"
+            android:textColor="@android:color/black"
+            app:font="@{`OpenSans-Regular.ttf`}"
+            android:layout_marginRight="10dp"
+
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="18dp"
+
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ºC"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            app:font="@{`OpenSans-Regular.ttf`}"
+
+            android:gravity="center_vertical"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mintemplay"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/templay"
+        android:layout_toRightOf="@+id/mintemptv"
+        android:gravity="right|center_vertical"
+        android:layout_marginRight="20dp"
+      >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{temp.min}"
+            android:id="@+id/mintemp"
+
+            android:layout_marginRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            app:font="@{`OpenSans-Regular.ttf`}"
+
+
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ºC"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            app:font="@{`OpenSans-Regular.ttf`}"
+
+            android:gravity="center_vertical"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/maxtemplay"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mintemplay"
+        android:layout_toRightOf="@+id/maxtemptv"
+        android:gravity="right|center_vertical"
+        android:layout_marginRight="20dp"
+      >
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{temp.max}"
+            android:id="@+id/maxtemp"
+            android:layout_below="@+id/mintemp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+            app:font="@{`OpenSans-Regular.ttf`}"
+            android:textColor="@android:color/black"
+
+
+
+            android:textSize="18dp"
+
+
+
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ºC"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            app:font="@{`OpenSans-Regular.ttf`}"
+            android:id="@+id/textView2"
+            android:gravity="center_vertical"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/humiditylay"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/maxtemplay"
+        android:layout_toRightOf="@+id/humiditytv"
+        android:gravity="right|center_vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{list.humidity}"
+            android:id="@+id/textView8"
+
+            android:textStyle="bold"
+            android:textSize="18dp"
+            app:font="@{`OpenSans-Regular.ttf`}"
+            android:textColor="@android:color/black"
+
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginRight="10dp"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=" %"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            app:font="@{`OpenSans-Regular.ttf`}"
+
+            android:gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>

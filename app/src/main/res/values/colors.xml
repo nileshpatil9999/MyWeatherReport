@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dividercolor">#ffffff</color>
+    <color name="cardbackground">#d5f5e3</color>
+    <color name="toolbarcolor">#7272BE</color>
+    <color name="statusbarcolor">#363689</color>
+</resources>
